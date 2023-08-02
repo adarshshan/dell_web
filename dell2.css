@@ -1,0 +1,51 @@
+#btttn{
+    position: fixed;
+    right: 40px;
+    color: #fff;
+    background: rgb(56, 56, 183);
+    bottom: 16px;
+    min-width: 130px;
+    height: 40px;
+    font-weight: 500;
+    border-radius: 2px;
+    border: none;
+}
+/*----Footer---*/
+footer{
+    width: 100%;
+    background-color: rgb(242, 241, 239);
+}
+footer .foot{
+    width: 95%;
+    margin: 20px auto;
+    display: flex;
+}
+footer .foot .footer-col{
+    width: 25%;
+    
+    padding: 20px;
+}
+footer .foot .footer-col p{
+    margin-top: 15px;
+    font-size: 14px;
+    color: rgb(157, 156, 156);
+}
+footer .foot .footer-col h5{
+    color: rgb(91, 92, 92);
+}
+.end{
+    width: 90%;
+    margin: 0 auto;
+    height: 90px;
+}
+.end .two{
+    margin-top: 30px;
+}
+.end .one li{
+    display: inline-block;
+    margin-right: 40px;
+}
+.end .two li{
+    display: inline-block;
+    margin-right: 40px;
+}

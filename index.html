@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell_web-clone</title>
+    <link rel="icon" href="data:image/png;base64,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">
+    <script src="https://kit.fontawesome.com/718fa3d4ba.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dell.css">
+    <link rel="stylesheet" href="dell2.css">
+    <script src="https://kit.fontawesome.com/718fa3d4ba.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+   <div class="container">
+    <button id="btttn"><i style="margin-right: 20px;" class="fa-solid fa-headset"></i>Contact Us</button>
+    <header>
+        <div class="logo">
+            <img class="logo-image" src="image/logodell.png" alt="">
+        </div>
+        <div class="search">
+            <input class="inp-search" type="search" id="#" placeholder="Search Dell">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-user"></i>Sign In<i class="fa-sharp fa-solid fa-angle-down"></i></a>
+                    <div class="signin">
+                        <h2>Welcome to Dell</h2><br><br>
+                        <p>My Account</p>
+                        <ul>
+                            <li>Place orders quickly and easily</li>
+                            <li>View orders and track your shipping Status</li>
+                            <li>Create and access a list of your products</li>
+                        </ul>
+                        <div class="bttns">
+                            <button style="background: rgb(53, 53, 253);"><a style="color: #fff;" href="#">Sign In</a></button>
+                            <button><a href="#">Create an Account</a></button>
+                            <button><a href="#">Premier sign In</a></button>
+                            <button><a href="#">Partner Program Sign In</a></button>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-headset"></i>Contact Us</a></li>
+                <li><a href="#"><i class="fa-solid fa-globe"></i>IN/EN<i class="fa-sharp fa-solid fa-angle-down"></i></a>
+                    <div class="en">
+                        <div class="lands">
+                            <ul>
+                                <li>America</li>
+                                <li>Asia Pacific & Japan</li>
+                                <li>Europe</li>
+                                <li>Midle East & Africa</li>
+                            </ul>
+                        </div>
+                        <div class="coundries">
+                            <div class="col">
+                                <p>Afganistan/English</p>
+                                <p>Australia/English</p>
+                                <p>Bangladesh/English</p>
+                                <p>Bhutan/English</p>
+                                <p>Brunei/English</p>
+                                <p>Cambodia/English</p>
+                                <p>China Mainland</p>
+                                <p>Fiji/English</p>
+                                <p>French Polynesia/Francais</p>
+                                <p>Guam/English</p>
+                                <p>Hong Kong/English</p>
+                            </div>
+                            <div class="col">
+                                <p>Japan</p>
+                                <p>Kazhakistan</p>
+                                <p>Kiribati/English</p>
+                                <p>Korea</p>
+                                <p>Kyrgystan</p>
+                                <p>Laos/English</p>
+                                <p>Malasia/English</p>
+                                <p>Maldives/English</p>
+                                <p>Mongolia/English</p>
+                                <p>Myanmar/English</p>
+                                <p>Nepal/English</p>
+                            </div>
+                            <div class="col">
+                                <p>Palau/English</p>
+                                <p>Papua New Guinea/English</p>
+                                <p>Philippinies/English</p>
+                                <p>Samoa/English</p>
+                                <p>Singapore/English</p>
+                                <p>Sri Lanka/English</p>
+                                <p>Taiwan</p>
+                                <p>Tajikistan</p>
+                                <p>Tailand/English</p>
+                                <p>Turkmenistan</p>
+                                <p>Uzbekistan</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>Cart<i class="fa-sharp fa-solid fa-angle-down"></i></a>
+                    <div class="cart">
+                        <h2>Your Dell.com Carts</h2>
+                        <p>Your Cart is empty</p>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="lists">
+        <ul>
+            <li><a href="#">APEX<i class="fa-sharp fa-solid fa-angle-down"></i></a>
+                <div class="apex">
+                    <ul>
+                        <li><a href="#">View All APEX</a></li>
+                        <li><a href="#">Compute & HCI<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">Storage<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">Cyber& Data Protection<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">Cloud Platforms<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">APEX High Performance <br>Computing</a></li>
+                        <li><a href="#">Create & Costom Solution<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">Resources<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Products<i class="fa-sharp fa-solid fa-angle-down"></i></a>
+                <div class="products">
+                    <ul>
+                        <li><a href="#">Laptops<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">Desktops & All-in-Ones<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">Gaming<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">Workstations</a></li>
+                        <li><a href="#">Thin Clients</a></li>
+                        <li><a href="#">Servers</a></li>
+                        <li><a href="#">Data Storage</a></li>
+                        <li><a href="#">Data Protection</a></li>
+                        <li><a href="#">Networking</a></li>
+                        <li><a href="#">Hyperconverged Infrastructure</a></li>
+                        <li><a href="#">Monitors<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">Electronic & Accesories<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Solutions<i class="fa-sharp fa-solid fa-angle-down"></i></a>
+                <div class="solutions">
+                    <ul>
+                        <li><a href="#">View Solutions</a></li>
+                        <li><a href="#">Cloud Solutions<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">DevOps Tools and Solutions</a></li>
+                        <li><a href="#">Edge Solutions</a></li>
+                        <li><a href="#">Industry Solutions<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">Infrastructure Solutions</a></li>
+                        <li><a href="#">Midmarket Solutions<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">OEM Solutions</a></li>
+                        <li><a href="#">Small Business<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">Workforce Solutions<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Services<i class="fa-sharp fa-solid fa-angle-down"></i></a>
+                <div class="services">
+                    <ul>
+                        <li><a href="#">View All Services</a></li>
+                        <li><a href="#">Security Services</a></li>
+                        <li><a href="#">Consulting Services</a></li>
+                        <li><a href="#">Deployment Services</a></li>
+                        <li><a href="#">Support Services</a></li>
+                        <li><a href="#">Residency Services</a></li>
+                        <li><a href="#">Education Services</a></li>
+                        <li><a href="#">Services Technology</a></li>
+                        <li><a href="#">Payment & consumption <br>Solutions</a></li>
+                        <li><a href="#">Premier: e-Procurement & <br>Integrations</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Support<i class="fa-sharp fa-solid fa-angle-down"></i></a>
+                <div class="support">
+                    <ul>
+                        <li><a href="#">Support Home</a></li>
+                        <li><a href="#">Support Library</a></li>
+                        <li><a href="#">Support Services & Warranty</a></li>
+                        <li><a href="#">Drivers & Downloads</a></li>
+                        <li><a href="#">Manuel & documentation</a></li>
+                        <li><a href="#">Diagnostics &Tools</a></li>
+                        <li><a href="#">Self-Repair & Parts</a></li>
+                        <li><a href="#">Service Requests & Dispatch <br>Status</a></li>
+                        <li><a href="#">Order Support</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Deals<i class="fa-sharp fa-solid fa-angle-down"></i></a>
+                <div class="deals">
+                    <ul>
+                        <li><a href="#">Laptop Deals<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">Desktop Deals<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">Gaming PC Deals</a></li>
+                        <li><a href="#">XPS Laptop Deals<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">Server,Storage & Networking <br>Deals</a></li>
+                        <li><a href="#">Monitor Deals<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">Computer Accesories Deals<i class="fa-sharp fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#">Employee Discounts</a></li>
+                        <li><a href="#">Student Purchase Program</a></li>
+                        <li><a href="#">Dell Professional Accociations</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Find a Store</a></li>
+        </ul>
+    </div>
+    <section class="item-row">
+        <div class="items">
+            <div class="item">
+                <h1><i class="fa-solid fa-laptop"></i></h1>
+                <p>Laptops</p>
+                <div class="sub">
+                    <a href="#">For Home</a>
+                    <a href="#">For Business</a>
+                </div>
+            </div>
+            <div class="item">
+                <h1><i class="fa-sharp fa-solid fa-computer"></i></h1>
+                <p>Desktops</p>
+                <div class="sub">
+                    <a href="#">For Home</a>
+                    <a href="#">For Business</a>
+                </div>
+            </div>
+            <div class="item">
+                <img class="ima" src="image/alien.png" alt="">
+                <p>alienware</p>
+                <div class="sub">
+                    <a href="#">For Home</a>
+                    <a href="#">For Business</a>
+                </div>
+            </div>
+            <div class="item">
+                <h1><i class="fa-solid fa-laptop"></i></h1>
+                <p>Vestro</p>
+                <div class="sub">
+                    <a href="#">For Home</a>
+                    <a href="#">For Business</a>
+                </div>
+            </div>
+            <div class="item">
+                <h1><i class="fa-sharp fa-solid fa-desktop"></i></h1>
+                <p>Monitor</p>
+                <div class="sub">
+                    <a href="#">For Home</a>
+                    <a href="#">For Business</a>
+                </div>
+            </div>
+            <div class="item">
+                <h1><i class="fa-sharp fa-solid fa-headphones"></i></h1>
+                <p>Accesories</p>
+                <div class="sub">
+                    <a href="#">For Home</a>
+                    <a href="#">For Business</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-1">
+        <div class="page1-left">
+           <div class="inn">
+            <h3 style="font-weight: 550;
+            color: rgb(109, 47, 168);">BACK TO COLLEGE</h3><br>
+            <h1>Doing Is The New Learning</h1><br>
+            <p>Empower your ideas now with the latest tech from Dell.</p>
+            <div class="left-bttn">
+                <button class="lbtn">Student Deals</button>
+                <button class="rbtn">Monitor Deals</button>
+            </div>
+           </div>
+        </div>
+        <div class="page1-right"></div>
+
+    </section>
+    <section class="page-2">
+        <div class="page2head">
+            <p>Welcome Back</p>
+        </div>
+        <div class="threeitems">
+            <div class="card">
+                <div class="c-1">
+                    <p style="font-size: 30px;">best Seller</p>
+                </div>
+                <div class="c-2">
+                    <div class="cim1">
+                        <img style="width: 100%; height: 100%;" src="https://i.dell.com/sites/csimages/UberHomePage_Imagery/all/xps-13-9320-15-9520.png" alt="">
+                    </div>
+                    <div class="write">
+                        <p>Get our best laptop for less</p>
+                    </div>
+                </div>
+                <div style="margin-top: 74px; width: 100%; font-size: 1.25rem;"><a style="text-decoration: none;" href="#">Shop Now</a></div>
+            </div>
+            <div class="card">
+                <div class="div1">
+                    <p style="font-size: 30px;">Student Purchase Program</p>
+                </div>
+                <div class="div2">
+                    <p>Get Special Discounts under our Student purchase program.</p>
+                </div>
+                <div style="margin-top: 85px; width: 100%; font-size: 1.25rem;">
+                    <a style="text-decoration: none;" href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="acc">
+                    <p style="font-size: 30px;">Access My Account</p>
+                </div>
+                <div class="cont">
+                    <p>Sign in to your account to track & view your orders.</p>
+                </div>
+                <div style="width: 100%; margin-top: 105px; font-size: 1.25rem;"><a style="text-decoration: none;" href="#">Sign In</a></div>
+            </div>
+        </div>
+    </section>
+    <section class="page-3">
+        <div class="left-3">
+            <img style="width: 85%; height: 98%; float: right;" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/heroes/show-cons-dell-xps-9320t-9320nt-uhp-2402-04-in-homepage-hero-1023x842.png?fmt=png-alpha&wid=1023&hei=842" alt="">
+        </div>
+        <div class="right-3">
+            <div class="laps">
+            <p>XPS LAPTOPS</p>
+            <P style="font-size: 30px;">A Creative Powerhouse</P>
+            <p style="font-size: 1.25rem;">Impressive savings on the XPS with instant discounts* on Netbanking & headsets.</p>
+            <p style="font-size: 12px;">*T&C apply.</p>
+            <h5 style="font-size: 1.25rem; color: rgb(14, 109, 210);">Shop Now  |  learn More</h5>
+            </div>
+        </div>
+    </section>
+    <section class="page-4">
+        <div class="left-4">
+            <div class="laps">
+                <p>STRIKING MONITORS</p>
+                <P style="font-size: 30px;">Stylish Designs with Total Immersion</P>
+                <p style="font-size: 1.25rem;">Up to 5 Year warranty* on an incredible selection of reliable,gorgeous displays.</p>
+                <p style="font-size: 12px;">*Only for selected Gaming & S Series monitors.</p>
+                <h5 style="font-size: 1.25rem; color: rgb(14, 109, 210);">Shop Now</h5>
+                </div>
+        </div>
+        <div class="right-4">
+            <img style="
+            width: 86%;
+            height: 105%;" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/ena-show-cons-dell-s2723hc-uhp-2302-10-au-homepage-module-lf-1023x842.png?fmt=png-alpha&wid=1023&hei=842" alt="">
+        </div>
+    </section>
+    <section class="page-5">
+        <div class="left-5">
+            <div class="le5">
+                <p style="font-size: 40px;">Dell Support</p>
+                <p style="font-size: 1.22rem; margin-top: 14px;">Get your questions answered.</p>
+            </div>
+        </div>
+        <div class="right-5">
+            <div class="row">
+                <a style="text-decoration: none;color: rgb(59, 59, 254);" href="#"><h5 style="font-size: 1.65rem; margin-top: 10px; font-weight: 300;"><i style="margin-right: 20px;" class="fa-solid fa-headset"></i>Contact Support</h5></a>
+                <p style="margin-left: 49px;
+                margin-top: 12px;
+                font-size: 18px;">Let us assist you with any products or service questions</p>
+            </div>
+            <div class="row">
+                <a style="text-decoration: none;color: rgb(59, 59, 254);" href="#"><h5 style="font-size: 1.65rem; margin-top: 10px; font-weight: 300;"><span style="margin-right: 20px;" class="material-symbols-outlined">
+                    check_circle
+                    </span>Warranty and Contacts</h5></a>
+                <p style="margin-left: 49px;
+                margin-top: 12px;
+                font-size: 18px;">Check warranty of the product</p>
+            </div>
+            <div class="row">
+                <a style="text-decoration: none;color: rgb(59, 59, 254);" href="#"><h5 style="font-size: 1.65rem; margin-top: 10px; font-weight: 300;"><span style="margin-right: 20px;" class="material-symbols-outlined">
+                    forum
+                    </span>Product Support</h5></a>
+                <p style="margin-left: 49px;
+                margin-top: 12px;
+                font-size: 18px;">Expertise. Convenience. Quality Support.</p>
+            </div>
+            <div style="border: none;" class="row">
+                <a style="text-decoration: none;color: rgb(59, 59, 254);" href="#"><h5 style="font-size: 1.65rem; margin-top: 10px; font-weight: 300;"><span style="margin-right: 20px;" class="material-symbols-outlined">
+                    settings
+                    </span>Drivers and Downloads</h5></a>
+                <p style="margin-left: 49px;
+                margin-top: 12px;
+                font-size: 18px;">Get the latest Drivers and Softwares.</p>
+            </div>
+        </div>
+    </section>
+    <section id="page-6" class="page-3">
+        <div class="left-3">
+            <img style="width: 85%; height: 98%; float: right;" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/btc-cons-dell-inspiron-5420nt-km5221w-uhp-2402-08-in-homepage-mod-rf-1023x842-lr.png?fmt=png-alpha&wid=1023&hei=842" alt="">
+        </div>
+        <div class="right-3">
+            <div class="laps">
+            <p>POWERFUL ALL-IN-ONES</p>
+            <P style="font-size: 30px;">Do It To Learn It</P>
+            <p style="font-size: 1.25rem;">Tap into the latest tech & bring your ideas to life, now with instant discounts* on UPI/Netbanking.</p>
+            <p style="font-size: 12px;">*T&C apply.</p>
+            <h5 style="font-size: 1.25rem; color: rgb(14, 109, 210);">Shop Now  |  learn More</h5>
+            </div>
+        </div>
+    </section>
+    <section id="page-7" class="page-4">
+        <div class="left-4">
+            <div class="laps">
+                <p>ALIENWARE M16</p>
+                <P style="font-size: 30px;">Rise To The Challenge</P>
+                <p style="font-size: 1.25rem;">Elevate your game on the new 16 gaming laptop with elite power and advanced Cryo-tech.</p>
+                <p style="font-size: 12px;">*Only for selected Gaming & S Series monitors.</p>
+                <h5 style="font-size: 1.25rem; color: rgb(14, 109, 210);">Shop Now | Learn More</h5>
+                </div>
+        </div>
+        <div class="right-4">
+            <img style="
+            width: 86%;
+            height: 105%;" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/cs2304g0006-616605-gl-cs-co-site-banner-m16-1023x842-right.png?fmt=png-alpha&wid=1023&hei=842" alt="">
+        </div>
+    </section>
+    <section class="page-8">
+        <div class="left-8">
+            <img style="width: 100%; height: 100%;" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/member-purchase-program-cons-dell-lifestyle-inspiron-7510nt-uhp-2401-08-in-homepage-module-rf-1288x785-hr.png?fmt=jpg&wid=1288&hei=785" alt="">
+        </div>
+        <div class="right-8">
+            <div class="lap">
+            <p>POWERFUL ALL-IN-ONES</p>
+            <P style="font-size: 30px;">Do It To Learn It</P>
+            <p style="font-size: 1.25rem;">Tap into the latest tech & bring your ideas to life, now with instant discounts* on UPI/Netbanking.</p>
+            <p style="font-size: 12px;">*T&C apply.</p>
+            <h5 style="font-size: 1.25rem; color: rgb(14, 109, 210);">Shop Now  |  learn More</h5>
+            </div>
+        </div>
+    </section>
+    <section class="page-9">
+        <div class="left-9">
+            <section class="page--9">
+                <div class="left--9">
+                    <div class="laps9">
+                        <p>BACK TO COLLEGE</p>
+                        <P style="font-size: 30px;">Be A Change-Maker</P>
+                        <p style="font-size: 1.25rem;">Discover offers on innovative tech to empower your ideas. Get instant discounts on Netbanking & headsets. *T&C apply</p>
+                        <h5 style="font-size: 1.25rem; margin-top: 31px; color: rgb(14, 109, 210);">Laptop Deals</h5>
+                        </div>
+                </div>
+                <div class="right--9">
+                    <img style="
+                    width: 96%;
+                    height: 92%;" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/2-ups/btc-cons-dell-inspiron-5620t-uhp-2402-08-in-homepage-2up-mod-800x400.png?fmt=pjpg&pscan=auto&scl=1&wid=800&hei=400&qlt=100,0&resMode=sharp2&size=800,400&op_usm=1.75,0.3,2,0" alt="">
+                </div>
+                <img style="width: 37px; margin-top: -37px; margin-left: 10px; z-index: 10;" src="image/sticker.png" alt="">
+            </section>
+        </div>
+        <div class="right-9">
+            <section class="page--9">
+                <div class="left--9">
+                    <div class="laps9">
+                        <p>COMPUTER ELECTRONICS AND ACCESSORIES</p>
+                        <P style="font-size: 30px;">Overprepared For Everything</P>
+                        <p style="font-size: 1.25rem;">Whether you're looking for a keyboard,mouse,docking station or somthing else,we've got you covered.</p>
+                        <h5 style="font-size: 1.25rem; margin-top: 31px; color: rgb(14, 109, 210);">Shop Now</h5>
+                        </div>
+                </div>
+                <div class="right--9">
+                    <img style="
+                    width: 96%;
+                    height: 92%;" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/banners/q4w1-con-warm-2updeal2-wl5022-km7321w-mh3021p-800x400.jpg?fmt=pjpg&pscan=auto&scl=1&wid=800&hei=400&qlt=100,0&resMode=sharp2&size=800,400&op_usm=1.75,0.3,2,0" alt="">
+                </div>
+            </section>
+        </div>
+    </section>
+    <footer>
+        <div class="foot">
+            <div class="footer-col">
+                <h5><i style="margin-right: 5px;" class="fa-solid fa-globe"></i>IN/EN<i style="margin-left: 5px;" class="fa-sharp fa-solid fa-angle-down"></i></h5>
+                <p>Site Map</p><br><br><br><br><br>
+                <h5>Our Offerings</h5>
+                <p>APEX</p>
+                <p>Products</p>
+                <p>Solutions</p>
+                <p>Services</p>
+                <p>Deals</p>
+            </div>
+            <div class="footer-col">
+                <h5>Account</h5>
+                <p>My account</p>
+                <p>Order Status</p>
+                <p>My products</p><br><br>
+                <h5>Our Company</h5>
+                <p>Who We Are</p>
+                <p>Careers</p>
+                <p>Dell technologies Capital</p>
+                <p>Investors</p>
+                <p>Newsroom</p>
+                <p>Perspectives</p>
+                <p>Recycling</p>
+                <p>ESG & Impact</p>
+                <p>Costomer Stories</p>
+            </div>
+            <div class="footer-col">
+                <h5>Support</h5>
+                <p>Support Home</p>
+                <p>Contact Support</p><br><br><br><br>
+                <h5>Our Partners</h5>
+                <p>Find a partner</p>
+                <p>OEM Solutions</p>
+                <p>Partner Program</p>
+            </div>
+            <div class="footer-col">
+                <h5>Connect with Us</h5>
+                <p>Community</p>
+                <p>Contact Us</p><br><br><br><br>
+                <h5>Resources</h5>
+                <p>Blog</p>
+                <p>Events</p>
+                <p>Dell Learning Center</p>
+                <p>Glossary</p>
+                <p>Privacy Centre</p>
+                <p>Resource Library</p>
+                <p>Trial Software Downloads</p>
+            </div>
+        </div>
+        <div class="end">
+            <ul class="one">
+                <li><h5>Dell Technologies</h5></li>
+                <li><h5>Dell Premier</h5></li>
+            </ul>
+            <ul class="two">
+                <li><small>Copyright © 2023 Dell Inc.</small></li>
+                <li><small>Terms of sale</small></li>
+                <li><small>Privacy Statement</small></li>
+                <li><small>Leagel & Regulatory</small></li>
+                <li><small>Accessibility</small></li>
+            </ul>
+        </div>
+    </footer>
+</div> 
+</body>
+</html>
